@@ -15,7 +15,13 @@
  */
 
 function coinFlip() {
-
+  var result=Math.random(0,2);
+  if(result==1){
+    return "heads";
+  }
+  else{
+    return "tails";
+  }
 }
 
 /** Multiple coin flips
@@ -38,7 +44,11 @@ function coinFlip() {
  */
 
 function coinFlips(flips) {
-
+  var flipArray=[];
+  for(var i=0; i<flips; i++){
+    flipArray[i]=coinFlip();
+  }
+  return flipArray;
 }
 
 /** Count multiple flips
@@ -55,7 +65,17 @@ function coinFlips(flips) {
  */
 
 function countFlips(array) {
-
+  var headsCount=0, tailsCount=0;
+  for(var i=0; i<array.length; i++){
+    if(array[i].equals("heads")){
+      headsCount++;
+    }
+    else if(array[i].equals("tails")){
+      tailsCount++;
+    }
+  }
+  let countObject={heads:headsCount, tails:tailsCount}
+  return countObject;
 }
 
 /** Flip a coin!
