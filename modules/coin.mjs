@@ -90,7 +90,16 @@ function countFlips(array) {
  */
 
 function flipACoin(call) {
-
+  var result;
+  var flip=coinFlip();
+  if(call.equals(flip)){
+    result="win";
+  }
+  else{
+    result="lose";
+  }
+  let coinObject={call:call, flip:flip, result:result};
+  return coinObject;
 }
 
 
@@ -98,3 +107,4 @@ function flipACoin(call) {
  * 
  * Export all of your named functions
 */
+export{coinFlip, coinFlips, countFlips, flipACoin};
