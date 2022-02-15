@@ -15,8 +15,8 @@
  */
 
 function coinFlip() {
-  var result=Math.random(0,2);
-  if(result==1){
+  var result=Math.random();
+  if(result<.5){
     return "heads";
   }
   else{
@@ -67,10 +67,10 @@ function coinFlips(flips) {
 function countFlips(array) {
   var headsCount=0, tailsCount=0;
   for(var i=0; i<array.length; i++){
-    if(array[i].equals("heads")){
+    if(array[i] == "heads"){
       headsCount++;
     }
-    else if(array[i].equals("tails")){
+    else if(array[i] == "tails"){
       tailsCount++;
     }
   }
