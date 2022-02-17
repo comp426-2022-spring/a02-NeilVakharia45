@@ -17,10 +17,10 @@
 function coinFlip() {
   var result=Math.random();
   if(result<.5){
-    return "heads";
+    return "tails";
   }
   else{
-    return "tails";
+    return "heads";
   }
 }
 
