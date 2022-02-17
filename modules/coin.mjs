@@ -16,7 +16,7 @@
 
 function coinFlip() {
   var result=Math.random();
-  if(result<.5){
+  if(result<=.5){
     return "tails";
   }
   else{
