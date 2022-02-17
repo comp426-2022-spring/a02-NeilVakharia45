@@ -74,7 +74,7 @@ function countFlips(array) {
       tailsCount++;
     }
   }
-  let countObject={heads:headsCount, tails:tailsCount}
+  let countObject={tails: tailsCount, heads:headsCount}
   return countObject;
 }
 
