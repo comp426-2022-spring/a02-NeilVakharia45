@@ -46,7 +46,7 @@ function coinFlip() {
 function coinFlips(flips) {
   var flipArray=[];
   for(var i=0; i<flips; i++){
-    flipArray[i]=coinFlip();
+    flipArray.push(coinFlip());
   }
   return flipArray;
 }
