@@ -4,7 +4,9 @@ import minimist from "minimist";
 // Call the coinFlip function and put the return into STDOUT
 var argv = minimist(process.argv.slice(2));
 var number=argv["number"]
-number = number || 1;
+if(number==undefined){
+    number=1;
+}
 
 var flips = coinFlips(number);
 console.log(flips);
